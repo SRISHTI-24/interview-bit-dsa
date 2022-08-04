@@ -1,0 +1,16 @@
+vector<int> Solution::solve(vector<int> &A) {
+    vector<int> b;
+    int l=A.size();
+    int arr[l];
+    int k=0;
+    for(int i=0;i<A.size();i++)
+    {
+        int d=A[i]*A[i];
+        arr[k]=d;
+        k++;
+    }
+    for(int i=0;i<k;i++)
+    b.push_back(arr[i]);
+    sort(b.begin(), b.end());
+    return b;
+}
